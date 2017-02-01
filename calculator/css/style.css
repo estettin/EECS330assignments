@@ -1,0 +1,222 @@
+* {
+    font-family: sans-serif;
+}
+
+/* UTILITIES */
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.left {
+    float: right;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.pad {
+	padding: .25em .2em 0;
+}
+
+/* GRID (based on flexgrid.css) */
+
+.grid {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    clear: both;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row .col {
+	float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    position: relative;
+}
+
+.col.col1 {
+    width: 8.333%;
+}
+
+.col.col2 {
+    width: 16.667%;
+}
+
+.col.col3 {
+    width: 25%;
+}
+
+.col.col4 {
+    width: 33.333%;
+}
+
+.col.col5 {
+    width: 41.667%;
+}
+
+.col.col6 {
+    width: 50%;
+}
+
+.col.col7 {
+    width: 58.333%;
+}
+
+.col.col8 {
+    width: 66.666%;
+}
+
+.col.col9 {
+    width: 75%;
+}
+
+.col.col10 {
+    width: 83.333%;
+}
+
+.col.col11 {
+    width: 91.667%;
+}
+
+.col.col12 {
+    width: 100%;
+}
+
+/* CALCULATOR */
+
+.calculator {
+	background: #AFAFAF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#DDDDDD, #ADADAD); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#DDDDDD, #ADADAD); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#DDDDDD, #ADADAD); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#DDDDDD, #ADADAD); /* Standard syntax (must be last) */
+	padding: .75em;
+	position: absolute;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.old {
+
+      background: -webkit-linear-gradient(#DDDDDD , #B1B1B1); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#DDDDDD, #B1B1B1); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#DDDDDD, #B1B1B1); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#DDDDDD , #B1B1B1); /* Standard syntax */
+}
+
+.btn {
+	height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: .35em 1em;
+   background: #f0f0f0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, #F7F7F7 3px, #D7D7D7 93%, #A9A9A9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, #F7F7F7 3px, #D7D7D7 93%, #A9A9A9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, #F7F7F7 3px, #D7D7D7 93%, #A9A9A9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #F7F7F7 3px, #D7D7D7 93%, #A9A9A9); /* Standard syntax */
+    border: 1px solid #6D6D6D;
+    border-top: 0px;
+    border-left: 0px;
+    box-shadow: 0px 1px 5px #9C9C9C;
+}
+
+.btn:hover, .btn:active {
+    background: #f0f0f0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, #F7F7F7, #D7D7D7 98%, #A9A9A9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, #F7F7F7, #D7D7D7 98%, #A9A9A9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, #F7F7F7, #D7D7D7 98%, #A9A9A9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #F7F7F7, #D7D7D7 98%, #A9A9A9); /* Standard syntax */
+
+}
+
+.btn:active {
+    border-color: transparent;
+    border-bottom: 0;
+    outline: none;
+
+}
+
+.btn:focus {
+    outline: none;
+    /* box-shadow: 1px 1px #6D6D6D; */
+}
+
+.disp {
+    background-color: #F0FACA;
+    min-height: 54px;
+    border-radius: 7px;
+    border: inset #C0C0C0;
+    border-bottom: #E7E7E7 inset;
+    border-left: #B9B9B9 inset;
+    border-right: #B4B4B4 inset;
+    padding: 0 1em 0 0;
+    
+
+
+}
+
+.keypad {
+    padding: 1em 0 0;
+}
+
+.eq {
+	height: 100%;
+	flex-direction: column;
+  	justify-content: flex-end;
+  	-webkit-justify-content: flex-end;
+	width: 100%;
+}
+
+#operator_display {
+    font-size: 12px;
+}

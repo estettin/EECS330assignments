@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="grid disp">
+            <div class="row ">
+                <div class="pad col col12 text-right">
+                    <output id="display"></output>
+                <!-- <span id="answer">0</span> --></div>
+            </div>
+            <div class="row">
+                <div class="pad col col6"></div>
+                <div class="pad col col6 center"><output id="operation"></output></div>
+            </div>
+        </div>
+        <div class="grid keypad">
+            <div class="row">
+                <div class="pad col col3"><button class="btn">MC</button></div>
+                <div class="pad col col3"><button class="btn">M&#x0002B;</button></div> <!-- plus -->
+                <div class="pad col col3"><button class="btn">M&#x02013;</button></div> <!-- minus -->
+                <div class="pad col col3"><button class="btn">MR</button></div>
+            </div>
+            <div class="row">
+                <div class="pad col col3"><button class="btn" onclick="CLEAR()">C</button></div>
+                <div class="pad col col3"><button id="operator" onclick="toggleSign()" class="btn">&#x000B1;</button></div> <!-- plus or minus -->
+                <div class="pad col col3"><button id="operator" class="btn" value="/" onclick="enter_operation('&#x000F7;')">&#x000F7;</button></div> <!-- divide -->
+                <div class="pad col col3"><button id="operator" class="btn" value="*" onclick="enter_operation('&#x000D7;')">&#x000D7;</button></div> <!-- multiply -->
+            </div>
+            <div class="row">
+                <div class="pad col col3"><button class="btn" id="button-7" value="7">7</button></div>
+                <div class="pad col col3"><button class="btn" id="button-8" value="8">8</button></div>
+                <div class="pad col col3"><button class="btn" id="button-9" value="9">9</button></div>
+                <div class="pad col col3"><button class="btn" value="&#x02013;" onclick="enter_operation(this.value)">&#x02013;</button></div> <!-- minus -->
+            </div>
+            <div class="row">
+                <div class="pad col col3"><button class="btn" id="button-4" value="4">4</button></div>
+                <div class="pad col col3"><button class="btn" id="button-5" value="5">5</button></div>
+                <div class="pad col col3"><button class="btn" id="button-6" value="6">6</button></div>
+                <div class="pad col col3"><button class="btn" id="operator" value="&#x0002B;" onclick="enter_operation(this.value)">&#x0002B;</button></div> <!-- plus -->
+            </div>
+            <div class="row">
+               
+                	<div class="col col9">
+                        <div class="grid">
+                            <div class="row">
+                                <div class="pad col col4"><button class="btn" id="button-1" value="1">1</button></div>
+                                <div class="pad col col4"><button class="btn" id="button-2" value="2">2</button></div>
+                                <div class="pad col col4"><button class="btn" id="button-3" value="3">3</button></div>
+                            </div>
+        	                <div class="row">
+                                <div class="pad col col8"><button class="btn" id="button-0" value="0">0</button></div>
+                                <div class="pad col col4"><button class="btn" value="." onclick="append_decimal()">&#x0002E;</button></div>
+                            </div>
+    	                </div>
+    	           </div>
+	            <div class="pad col col3"><button class="btn eq" onclick="Equals()">&#x0003D;</button></div> <!-- equals -->
+            </div>
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>
